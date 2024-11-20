@@ -5,6 +5,8 @@ CREATE TABLE admin (
     password VARCHAR(255) NOT NULL  
 );  
 
+DROP TABLE IF EXISTS `admin`;
+
 -- Insert admin records  
 INSERT INTO admin (user, password) VALUES ('a', 'a123');  
 INSERT INTO admin (user, password) VALUES ('b', 'b123');  
@@ -17,6 +19,8 @@ CREATE TABLE score (
     name VARCHAR(50) NOT NULL,  
     score DECIMAL(5, 2) NOT NULL  
 );  
+
+DROP TABLE IF EXISTS `score`;
 
 -- Insert score records, ensuring ids are unique and names exist in admin  
 INSERT INTO score (id, class, name, score) VALUES ('1', '1', 'e', 1);   
